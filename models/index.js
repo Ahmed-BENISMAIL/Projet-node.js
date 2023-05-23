@@ -16,5 +16,6 @@ const db = {};
 db.categorie = model(sequelize).categorie; 
 db.scategorie = model(sequelize).scategorie; 
 db.article = model(sequelize).article;
+db.login = model(sequelize).login;
 db.sequelize = sequelize;
 module.exports = db;

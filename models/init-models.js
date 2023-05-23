@@ -1,11 +1,13 @@
 var DataTypes = require("sequelize").DataTypes;
 var _article = require("./article");
 var _categorie = require("./categorie");
+var _login = require("./login");
 var _scategorie = require("./scategorie");
 
 function initModels(sequelize) {
   var article = _article(sequelize, DataTypes);
   var categorie = _categorie(sequelize, DataTypes);
+  var login = _login(sequelize, DataTypes);
   var scategorie = _scategorie(sequelize, DataTypes);
 
   scategorie.belongsTo(categorie, { as: "categorie", foreignKey: "categorie_id"});
@@ -16,6 +18,7 @@ function initModels(sequelize) {
   return {
     article,
     categorie,
+    login,
     scategorie,
   };
 }

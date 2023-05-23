@@ -6,6 +6,7 @@ const db = require("./models")
 const articleRouter = require("./routes/article.route") 
 const scategorieRouter = require("./routes/scategorie.route") 
 const categorieRouter = require("./routes/categorie.route") 
+const loginRouter = require("./routes/login.route") 
 dotenv.config();
 //BodyParser Middleware
 app.use(express.json());
@@ -26,3 +27,4 @@ app.listen(process.env.PORT, () => {
 app.use('/api/articles', articleRouter);
 app.use('/api/categories', categorieRouter);
 app.use('/api/scategories', scategorieRouter);
+app.use('/api/logins', loginRouter);

@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true
     },
     libelle: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING(30),
       allowNull: false
     },
     prix: {
